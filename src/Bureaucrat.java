@@ -75,4 +75,12 @@ public class Bureaucrat {
             return (false);
         }
     }
-}
+
+    public Boolean executeForm(Form target) {
+        if (signForm(target)) {
+            if (target.execute(this))
+                return (true);
+        }
+        return (false);
+    }
+};
